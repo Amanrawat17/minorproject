@@ -69,7 +69,8 @@ class YouTubeOperations:
                         'client_secrets.json',
                         self.SCOPES
                     )
-                    self.credentials = flow.run_local_server(port=port)
+                    self.credentials = flow.run_local_server(port=8051, open_browser=False)
+
 
                 with open('token.pickle', 'wb') as token:
                     pickle.dump(self.credentials, token)
